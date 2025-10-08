@@ -53,14 +53,12 @@
             <div class="container text-center">
                 <h2>Kennst Du das? Dieser zermürbende Gedanke...</h2>
                 <p>Du isst bewusst, Du bewegst Dich – aber das hartnäckige Fett am Bauch scheint ein Eigenleben zu führen und einfach nicht wegzugehen. Alles, was früher funktioniert hat, zeigt plötzlich keine Wirkung mehr.</p>
-                
                 <ul class="problem-list">
                     <li>Du fühlst Dich manchmal fremd und aufgebläht im eigenen Körper.</li>
                     <li>Die Zahl auf der Waage frustriert Dich mehr, als dass sie motiviert.</li>
                     <li>Du fragst Dich immer wieder: „Was mache ich denn falsch?"</li>
                 </ul>
-
-                <p style="margin-top: 40px;"><strong>Die Antwort ist: Gar nichts. Dein Körper braucht jetzt nur eine andere Strategie.</strong></p>
+                <p><strong>Die Antwort ist: Gar nichts. Dein Körper braucht jetzt nur eine andere Strategie.</strong></p>
             </div>
         </section>
 
@@ -139,7 +137,7 @@
                     </div>
                     
                     <div class="value-today">Heute nur 29€</div>
-                    <p class="value-savings">Du sparst 54%!</p>
+                    <p class="value-savings">Du sparst 34€ (54%)!</p>
                 </div>
             </div>
         </section>
@@ -186,7 +184,7 @@
                 <details class="faq-item">
                     <summary>Was ist mit der Bezahlung?</summary>
                     <div class="faq-answer">
-                        <p>Die Bezahlung läuft sicher über Digistore24.</p>
+                        <p>Die Bezahlung läuft sicher über Digistore24. Du kannst per PayPal, Kreditkarte, Sofortüberweisung oder Lastschrift bezahlen. Nach dem Kauf erhältst du sofort Zugang zu allen Inhalten.</p>
                     </div>
                 </details>
 
@@ -218,7 +216,7 @@
             
             <a href="DEIN_DIGISTORE24_LINK_HIER" class="cta-button">Ja, ich will meinen Körper wieder verstehen!</a>
             
-            <div class="trust-text">
+             <div class="trust-text">
                 <p>🔒 Sichere & verschlüsselte Zahlung über Digistore24<br>✓ Sofortiger Zugang per E-Mail nach dem Kauf</p>
             </div>
         </section>
@@ -231,6 +229,21 @@
         </div>
         <p class="copyright">© 2025 Jacqueline Näther-Piatraschk | Alle Rechte vorbehalten.</p>
     </footer>
+    
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = `fadeInUp 0.8s ease-out forwards`;
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
